@@ -11,6 +11,3 @@ sudo pacman -S --noconfirm --needed \
     pipewire-pulse \
 	pavucontrol \
     wireplumber 
-
-sudo systemctl enable pipewire-pulse.service
-sudo systemctl start pipewire-pulse.service
