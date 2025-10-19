@@ -2,6 +2,7 @@
 set -euo pipefail
 
 sudo pacman -S --noconfirm --needed \
+	less \
     nvim lua-language-server \
     tree \
     stow \
