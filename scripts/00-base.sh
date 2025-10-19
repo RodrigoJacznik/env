@@ -8,8 +8,15 @@ sudo pacman -S --noconfirm --needed \
 	intel-ucode \
 	linux-headers
 
-git clone https://aur.archlinux.org/yay.git
-cd yay
-sudo makepkg -si
-cd ../
-rm -r yay
+if ! command -v yay &> /dev/null; then
+    if [ -d "yay" ]; then
+        rm -rf yay
+    fi
+
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -s --noconfirm
+	sudo pacman -U --noconfirm --needed *.pkg.tar.zst
+	cd ../
+	rm -rf yay
+fi
