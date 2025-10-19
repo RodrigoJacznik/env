@@ -11,6 +11,7 @@ fi
 for file in ./scripts/*.sh; do
     echo "▶ Running $file"
     if [[ "$DRY_RUN" == "false" ]]; then
+		chmod +x $file
         $file
     fi
 done
