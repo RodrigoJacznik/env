@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
+sudo ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
+sudo hwclock --systohc
+sudo timedatectl set-ntp true
+
 sudo pacman -S --noconfirm --needed \
 	base-devel \
 	git \
