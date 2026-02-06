@@ -3,6 +3,11 @@ set -euo pipefail
 
 DRY_RUN=false
 
+if [[ $EUID -eq 0 ]]; then
+   echo "No ejecutes este script como root."
+   exit 1
+fi
+
 if [[ "${1:-}" == "--dry-run" ]]; then
     echo "dry"
     DRY_RUN=true
