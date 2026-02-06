@@ -12,10 +12,23 @@ Repositorio personal para configurar Arch Linux
 
 ---
 
+## Antes de instalar
+
+- Crea usuario no root
+
+```bash
+useradd -m -G wheel [user]
+passwd [user]
+
+sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+
+exit
+```
+
 ## Instalación
 
 ```bash
-git clone https://github.com/rodrigojacznik/environment.git
+git clone https://github.com/rodrigojacznik/env.git
 cd environment 
 chmod +x setup.sh scripts/*.sh
 ./setup.sh
