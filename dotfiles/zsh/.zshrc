@@ -1,3 +1,4 @@
+[ -f "$HOME/.paths" ] && source "$HOME/.paths"
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/rodrigo/.zshrc'
@@ -17,8 +18,3 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 alias ls="ls --color"
-
-export NPM_CONFIG_PREFIX="$HOME/.npm-global"
-export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || export PATH="$N_PREFIX/bin:$PATH"

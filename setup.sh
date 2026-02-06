@@ -3,6 +3,10 @@ set -euo pipefail
 
 DRY_RUN=false
 
+if [ -f "./dotfiles/zsh/.paths" ]; then
+    source "./dotfiles/zsh/.paths"
+fi
+
 if [[ $EUID -eq 0 ]]; then
    echo "No ejecutes este script como root."
    exit 1
