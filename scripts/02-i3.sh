@@ -11,4 +11,4 @@ sudo pacman -S --noconfirm --needed \
 	dunst \
 	ly
 
-sudo systemctl enable ly.service
+sudo systemctl enable ly@ttyX.service

@@ -16,3 +16,5 @@ sudo pacman -S --noconfirm --needed \
 	docker \
     ripgrep \
 	ufw
+
+sudo systemctl start --now docker.service
