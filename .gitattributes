@@ -1,0 +1,7 @@
+# Forzar que todos los archivos de texto usen LF al guardarse en Git
+* text=auto eol=lf
+
+# Asegurar que los scripts SIEMPRE sean LF sin importar el SO
+*.sh text eol=lf
+*.paths text eol=lf
+.zshrc text eol=lf

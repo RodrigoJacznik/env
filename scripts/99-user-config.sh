@@ -9,6 +9,14 @@ fi
 
 sudo usermod -aG docker,audio,video,storage "$CURRENT_USER"
 
+sudo systemctl enable ufw.service
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw enable
+sudo ufw allow ssh
+echo "y" | sudo ufw enable
+sudo systemctl start ufw
+
+git config --global core.autocrlf input
+git config --global user.name "Rodrigo Jacznik"
+git config --global user.email "jacznik.rodrigo@gmail.com"
+git config --global init.defaultBranch main

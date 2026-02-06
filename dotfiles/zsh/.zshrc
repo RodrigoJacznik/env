@@ -1,4 +1,4 @@
-[ -f "$HOME/.paths" ] && source "$HOME/.paths"
+[ -f "$HOME/.envs" ] && source "$HOME/.envs"
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/rodrigo/.zshrc'
@@ -18,3 +18,17 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 alias ls="ls --color"
+
+
+alias prusa='GDK_BACKEND=x11 prusa-slicer'
+
+cad() {
+    cd "$HOME/workspace/3d_design"
+    if [ -d ".venv" ]; then
+        source .venv/bin/activate
+        echo "🛠️ Entorno build123d activo"
+    fi
+}
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
