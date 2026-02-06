@@ -16,3 +16,5 @@ sudo pacman -S --noconfirm --needed \
 	ttf-noto-nerd \
 	ttf-nerd-fonts-symbols \
 	ttf-jetbrains-mono-nerd
+
+fc-cache -fv
