@@ -28,10 +28,8 @@ exec_always --no-startup-id picom --backend glx --vsync &
 exec_always --no-startup-id redshift -x
 exec_always --no-startup-id redshift-gtk -o
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill ~/arch-install/cat_firewatch.png
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/cat_firewatch.png
 exec --no-startup-id  dunst
-
-exec --no-startup-id GDK_BACKEND=x11 prusa-slicer
 
 gaps inner 5
 
