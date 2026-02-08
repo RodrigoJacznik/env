@@ -27,7 +27,7 @@ for file in $(ls "$REPO_ROOT"/scripts/*.sh | sort); do
     echo "▶ Running $file"
     if [[ "$DRY_RUN" == "false" ]]; then
         chmod +x "$file"
-        "$file $VM_FLAG"
+        "$file" $VM_FLAG
     fi
 done
 
