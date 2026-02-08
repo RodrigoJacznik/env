@@ -16,7 +16,8 @@ sudo pacman -S --noconfirm --needed \
 	docker \
     ripgrep \
 	ufw \
-    xdg-user-dirs
+    xdg-user-dirs \
+    feh
 
 LC_ALL=C xdg-user-dirs-update --force
 mkdir -p "$HOME/workspace"
