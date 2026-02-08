@@ -17,4 +17,6 @@ sudo pacman -S --noconfirm --needed \
 	ttf-nerd-fonts-symbols \
 	ttf-jetbrains-mono-nerd
 
+yay -S --noconfirm --needed oranchelo-icon-theme-git
+
 fc-cache -fv
