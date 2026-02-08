@@ -3,6 +3,11 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DRY_RUN=false
+VM_FLAG=""
+
+for arg in "$@"; do
+    if [ "$arg" == "--vm" ]; then VM_FLAG="--vm"; fi
+done
 
 if [ -f "$REPO_ROOT/dotfiles/zsh/.env" ]; then
     source "$REPO_ROOT/dotfiles/zsh/.env"
@@ -22,7 +27,7 @@ for file in $(ls "$REPO_ROOT"/scripts/*.sh | sort); do
     echo "▶ Running $file"
     if [[ "$DRY_RUN" == "false" ]]; then
         chmod +x "$file"
-        "$file"
+        "$file $VM_FLAG"
     fi
 done
 
