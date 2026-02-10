@@ -17,7 +17,9 @@ sudo pacman -S --noconfirm --needed \
     ripgrep \
 	ufw \
     xdg-user-dirs \
-    feh
+    feh \
+    yazi \
+    wiremix
 
 LC_ALL=C xdg-user-dirs-update --force
 mkdir -p "$HOME/workspace"
