@@ -3,8 +3,7 @@ set -euo pipefail
 
 sudo pacman -S --noconfirm --needed \
 	i3-wm \
-	xorg-server \
-	xorg-xinit \
+	xorg-server xorg-xinit xorg-xrandr \
 	picom \
 	rofi \
 	polybar \
